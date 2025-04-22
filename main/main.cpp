@@ -18,7 +18,7 @@
 
 // threads codes
 #include "game_loop.h"
-#include "dislpay.h"
+#include "display.h"
 #include "controller.h"
 #include "speaker.h"
 

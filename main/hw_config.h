@@ -12,8 +12,6 @@
 // speaker pin
 #define AUDIO GPIO_NUM_21
 
-#define DEBOUNCE_TIME_MS 50
-
 // display specs
 #define DISP_WIDTH 480
 #define DISP_HEIGHT 320

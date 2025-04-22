@@ -4,9 +4,9 @@
 void beep(uint32_t frequency, int duration_ms) {
 
     ledc_timer_config_t timer_conf = {
-        .speed_mode = LEDC_MODE,
-        .duty_resolution = LEDC_TIMER_10_BIT,
-        .timer_num = LEDC_TIMER,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .duty_resolution = LEDC_TIMER_2_BIT,
+        .timer_num = LEDC_TIMER_0,
         .freq_hz = frequency,
         .clk_cfg = LEDC_AUTO_CLK
     };
@@ -14,18 +14,18 @@ void beep(uint32_t frequency, int duration_ms) {
 
     ledc_channel_config_t channel_conf = {
         .gpio_num = AUDIO,
-        .speed_mode = LEDC_MODE,
-        .channel = LEDC_CHANNEL,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .channel = LEDC_CHANNEL_0,
         .intr_type = LEDC_INTR_DISABLE,
-        .timer_sel = LEDC_TIMER,
-        .duty = LEDC_DUTY,
+        .timer_sel = LEDC_TIMER_0,
+        .duty = 2,
         .hpoint = 0
     };
     ledc_channel_config(&channel_conf);
 
     vTaskDelay(pdMS_TO_TICKS(duration_ms));
 
-    ledc_stop(LEDC_MODE, LEDC_CHANNEL, 0);
+    ledc_stop(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 0);
 }
 
 
@@ -67,7 +67,7 @@ void task_speaker(void *t_args)
                 break;
 
             case 8:
-                beep(2300,50);
+                beep(2200,50);
                 break;
 
             default:

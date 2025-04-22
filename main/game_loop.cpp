@@ -1,36 +1,11 @@
 #include "game_loop.h"
 
-static void game_over()
-{
-    tft.fillRect(0, 0, DISP_WIDTH, DISP_HEIGHT, TFT_BLACK);
-    Textbox *gm = new Textbox(TFT_RED, 5, tft);
-    gm->draw(70, 100, "GAME OVER!");
-    delete gm;
-    Textbox *msg = new Textbox(TFT_RED, 1, tft);
-    msg->draw(70, 170, "If you want to play again, please restart the game console.");
-    delete msg;
-}
-
-static void end_game()
-{
-    tft.fillRect(0, 0, DISP_WIDTH, DISP_HEIGHT, TFT_BLACK);
-    Textbox *gm = new Textbox(TFT_YELLOW, 5, tft);
-    gm->draw(70, 100, "YOU WON!");
-    delete gm;
-    Textbox *msg = new Textbox(TFT_YELLOW, 1, tft);
-    msg->draw(70, 170, "If you want to play again, please restart the game console.");
-    delete msg;
-}
-
-static void play_sound(int sound)
-{
-    xQueueSend(sound_queue, &sound, portMAX_DELAY);
-}
-
 // Main game loop
 void task_game_loop(void *t_args)
 {
     int btnMsg;
+
+    test = new TestObject(250,140,20,10,TFT_PURPLE,tft);
 
     while (1)
     {
@@ -41,22 +16,22 @@ void task_game_loop(void *t_args)
 
             switch (btnMsg)
             {
-            case A:
+            case PRESS_A:
                 break;
 
-            case B:
+            case PRESS_B:
                 break;
 
-            case UP:
+            case PRESS_UP:
                 break;
 
-            case DOWN:
+            case PRESS_DOWN:
                 break;
 
-            case LEFT:
+            case PRESS_LEFT:
                 break;
 
-            case RIGHT:
+            case PRESS_RIGHT:
                 break;
 
             default:

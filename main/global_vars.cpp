@@ -11,3 +11,5 @@ QueueHandle_t sound_queue;
 // Semaphore for coordinates on display
 SemaphoreHandle_t disp_sem;
 
+TestObject* test = nullptr;
+

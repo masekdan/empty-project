@@ -3,12 +3,12 @@
 
 
 // CONTROLLER QUEUE MESSAGES
-#define A 1
-#define B 2
-#define UP 3
-#define DOWN 4
-#define LEFT 5
-#define RIGHT 6
+#define PRESS_A 1
+#define PRESS_B 2
+#define PRESS_UP 3
+#define PRESS_DOWN 4
+#define PRESS_LEFT 5
+#define PRESS_RIGHT 6
 
 // SOUND QUEUE MESSAGES
 #define TONE_A 1

@@ -19,6 +19,7 @@
 
 #include "gameObjects/DrawableObject.h"
 #include "gameObjects/Textbox.h"
+#include "gameObjects/TestObject.h"
 
 
 extern TFT_eSPI tft;
@@ -34,6 +35,8 @@ extern SemaphoreHandle_t disp_sem;
 
 
 // game objects
+
+extern TestObject* test;
 
 
 #endif

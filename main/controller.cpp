@@ -66,6 +66,6 @@ void task_controller(void *t_args)
         last_button_left_state = button_left_state;
         last_button_right_state = button_right_state;
 
-        vTaskDelay(pdMS_TO_TICKS(DEBOUNCE_TIME_MS));
+        vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
