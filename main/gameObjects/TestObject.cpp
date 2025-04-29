@@ -1,6 +1,6 @@
 #include "TestObject.h"
 
-TestObject::TestObject(int x, int y, int w, int h,uint32_t color, TFT_eSPI &tft) : DrawableObject(x,y,w,h,color,tft)
+TestObject::TestObject(int x, int y, int w, int h,uint16_t color, TFT_eSPI &tft) : DrawableObject(x,y,w,h,color,tft)
 {
 
 }

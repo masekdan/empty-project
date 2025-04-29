@@ -10,7 +10,7 @@ protected:
     uint32_t color;
     TFT_eSPI &tft;
 public:
-    DrawableObject(int x, int y,int w, int h,uint32_t color, TFT_eSPI &tft);
+    DrawableObject(int x, int y,int w, int h,uint16_t color, TFT_eSPI &tft);
     virtual ~DrawableObject();
     virtual void draw() = 0;
     void moveBy(int dirx, int diry);

@@ -1,7 +1,7 @@
 #include "DrawableObject.h"
 
 /// @brief Drawable Object constructor
-DrawableObject::DrawableObject(int x, int y, int w, int h, uint32_t color, TFT_eSPI &tft) : x(x), y(y), w(w), h(h), color(color), tft(tft)
+DrawableObject::DrawableObject(int x, int y, int w, int h, uint16_t color, TFT_eSPI &tft) : x(x), y(y), w(w), h(h), color(color), tft(tft)
 {
 }
 

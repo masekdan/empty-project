@@ -7,7 +7,7 @@ class TestObject : public DrawableObject
 {
 private:
 public:
-    TestObject(int x, int y, int w, int h,uint32_t color, TFT_eSPI &tft);
+    TestObject(int x, int y, int w, int h,uint16_t color, TFT_eSPI &tft);
     void draw() override;
     ~TestObject();
 };

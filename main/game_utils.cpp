@@ -77,16 +77,14 @@ int detect_collision(DrawableObject *&do1, DrawableObject *&do2)
 /// @brief Function that pauses the game
 void pause_game()
 {
-    int msg;
+    int msg = -1;
     play_sound(TONE_D);
     play_sound(TONE_C);
     play_sound(TONE_D);
     play_sound(TONE_C);
-    while (true)
+    while (msg!=PRESS_B)
     {
         xQueueReceive(controller_queue, &msg, pdMS_TO_TICKS(10));
-        if (msg==PRESS_B)
-            break;
     }
     play_sound(TONE_D);
     play_sound(TONE_C);
