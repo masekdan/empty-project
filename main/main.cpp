@@ -1,3 +1,15 @@
+
+/**
+ * @mainpage Documentation for game console
+ *
+ * This documentation was created by Daniel Mašek, MAS0188 and generated with doxygen
+ *
+ * ## Sections
+ * - [Files](files.html)
+ * - [Classes](classes.html)
+ *
+ */
+
 #include <stdio.h>
 #include <inttypes.h>
 
@@ -22,7 +34,7 @@
 #include "controller.h"
 #include "speaker.h"
 
-// GPIO button inititalization
+/// @brief GPIO button inititalization
 void init_buttons()
 {
     gpio_config_t btn_config;

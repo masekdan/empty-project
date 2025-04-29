@@ -1,5 +1,6 @@
 #include "display.h"
 
+/// @brief Display task
 void task_display(void *t_args)
 {
 

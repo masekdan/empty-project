@@ -1,6 +1,8 @@
 #include "speaker.h"
 
-// freq 1-2300
+/// @brief Plays sound for a set time
+/// @param frequency Frequency of the sound
+/// @param duration_ms Duration of the sound in miliseconds
 void beep(uint32_t frequency, int duration_ms) {
 
     ledc_timer_config_t timer_conf = {
@@ -28,7 +30,7 @@ void beep(uint32_t frequency, int duration_ms) {
     ledc_stop(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 0);
 }
 
-
+/// @brief Task for speaker
 void task_speaker(void *t_args)
 {
     int sound;

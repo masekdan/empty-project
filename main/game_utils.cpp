@@ -10,6 +10,7 @@ void play_sound(int sound)
     xQueueSend(sound_queue,&sound,portMAX_DELAY);
 }
 
+/// @brief Game over screen if player loses
 void game_over()
 {
     tft.fillRect(0,0,DISP_WIDTH,DISP_HEIGHT,TFT_BLACK);
@@ -27,6 +28,7 @@ void game_over()
     }
 }
 
+/// @brief Game over screen if player wins
 void end_game()
 {
     tft.fillRect(0,0,DISP_WIDTH,DISP_HEIGHT,TFT_BLACK);
@@ -72,6 +74,7 @@ int detect_collision(DrawableObject *&do1, DrawableObject *&do2)
     return 0;
 }
 
+/// @brief Function that pauses the game
 void pause_game()
 {
     int msg;

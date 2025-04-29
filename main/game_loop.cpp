@@ -1,6 +1,6 @@
 #include "game_loop.h"
 
-// Main game loop
+/// @brief Main game loop
 void task_game_loop(void *t_args)
 {
     int btnMsg;
